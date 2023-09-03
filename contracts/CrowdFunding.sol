@@ -10,7 +10,7 @@ contract CrowdFunding {
         uint256 deadline;
         uint256 amountCollected;
         address[] donators;
-        uint[] donations;
+        uint256[] donations;
     }
 
     mapping(uint256 => Campaign) public campaigns;

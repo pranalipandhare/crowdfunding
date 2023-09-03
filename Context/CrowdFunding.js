@@ -49,7 +49,7 @@ export const CrowdFundingProvider = ({ children }) => {
 
         const campaigns = await contract.getCampaigns();
 
-        const parsedCampaigns = campaigns.map((campaign, i) => ({
+        const parsedCampaings = campaigns.map((campaign, i) => ({
             owner: campaign.owner,
             title: campaign.title,
             description: campaign.description,
@@ -59,7 +59,7 @@ export const CrowdFundingProvider = ({ children }) => {
             ),
             pId: i,
         }));
-        return parsedCampaigns;
+        return parsedCampaings;
     };
 
     const getUserCampaigns = async () => {
@@ -76,7 +76,7 @@ export const CrowdFundingProvider = ({ children }) => {
 
         const filteredCampaigns = allCampaigns.filter(
             (campaign) =>
-                campaign.owner === "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+                campaign.owner === "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
         );
 
         const userData = filteredCampaigns.map((campaign, i) => ({
@@ -131,10 +131,11 @@ export const CrowdFundingProvider = ({ children }) => {
     };
 
     //---CHECK IF WALLET IS CONNECTED 
-    const checkIfWalletletConnected = async () => {
+    const checkIfWalletConnected = async () => {
         try {
             if (!window.ethereum)
                 return setOpenError(true), setError("Install MetaMask");
+
             const accounts = await window.ethereum.request({
                 method: "eth_accounts",
             });
@@ -150,7 +151,7 @@ export const CrowdFundingProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        checkIfWalletletConnected();
+        checkIfWalletConnected();
     }, []);
 
     //---CONNECT WALLET FUNCTION

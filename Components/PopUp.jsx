@@ -6,7 +6,7 @@ const PopUp = ({ setOpenModel, donate, donateFunction, getDonations }) => {
 
     const createDination = async () => {
         try {
-            const data = await donateFunction(donate, pId, amount);
+            const data = await donateFunction(donate.pId, amount);
             console.log(data);
         } catch (error) {
             console.log(error)
@@ -35,10 +35,11 @@ const PopUp = ({ setOpenModel, donate, donateFunction, getDonations }) => {
                             </h3>
                             <button
                                 className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 
-                                float-right text-3xl leading-none font-semibold outline-none"
+                                float-right text-3xl leading-none font-semibold outline-none
+                                focus:outline-none"
                                 onClick={() => setOpenModel(false)}
                             >
-                                <span className="bg-transparent text-black opacity-5 h-6 text-2xl
+                                <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl
                                 block outline-none focus:outline-none"
                                 >
 
@@ -72,10 +73,12 @@ const PopUp = ({ setOpenModel, donate, donateFunction, getDonations }) => {
                         </div>
 
                         {/*footer*/}
-                        <div className="flex items-senter justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                        <div className="flex items-center justify-end p-6 border-t border-solid 
+                        border-slate-200 rounded-b">
                             <button
-                                className="text-red-500 background-transparent font-bold uppercase px-6 py-7 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear
-                        transition-all duration-150"
+                                className="text-red-500 background-transparent font-bold uppercase px-6 
+                                py-7 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear
+                                transition-all duration-150"
                                 type="button"
                                 onClick={() => setOpenModel(false)}
                             >
