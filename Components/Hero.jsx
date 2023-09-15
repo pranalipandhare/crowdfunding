@@ -74,7 +74,7 @@ const Hero = ({ titleData, createCampaign }) => {
                   viewBox="0 0 12 12"
                 >
                   <path
-                    d="M9.707,5.2931-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.
+                    d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.
                     293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z"
                   />
                 </svg>
@@ -194,12 +194,12 @@ const Hero = ({ titleData, createCampaign }) => {
                       onClick={(e) => createNewCampaign(e)}
                       type="submit"
                       className="inline-flex items-center justify-center w-full h-12
-                      px-6 font-medium tracking-wide text-white transition duration-200
+                      px-6 font-bold tracking-wide text-white transition duration-200
                       rounded shadow-md bg-deep-purple-accent-400
                       hover:bg-deep-purple-accent-700 focus:shadow-outline 
                       focus:outline-none newColor"
                     >
-                      Create Campaign
+                      Create Your Campaign
                     </button>
                   </div>
                   <p className="text-xs text-gray-600 sm:text-sm">
