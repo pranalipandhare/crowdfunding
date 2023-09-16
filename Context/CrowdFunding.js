@@ -73,6 +73,14 @@ export const CrowdFundingProvider = ({ children }) => {
     });
 
     const currentUser = accounts[0];
+    try {
+      const accounts = await window.ethereum.request({
+        method: "eth_accounts",
+      });
+      setCurrentAcccount(accounts[0]);
+    } catch (error) {
+      console.error("Error while fetching accounts:", error);
+    }
 
     const filteredCampaigns = allCampaigns.filter(
       (campaign) =>
