@@ -40,13 +40,12 @@ const Hero = ({ titleData, createCampaign }) => {
               SHARE THE WEALTH
             </h2>
             <p className="max-w-xl mb-4 text-base text-gray-200 md:text-lg">
-              Sed ut persbbnc bcmdnsbnz jbcnxz jhcisdh jbci kaso xbnbcn
-              cbxmcsudg puqiueisdh bxnzbcvcuyguidiosahxjz bcsnbjhg weuwqio
-              gfiuefiefsj ;askpquwo nbcn hsidp weupwdjnc dnm,zcb gduiyp Sed ut
-              persbbnc bcmdnsbnz jbcnxz jhcisdh jbci kaso xbnbcn cbxmcsudg
-              puqiueisdh bxnzbcvcuyguidiosahxjz bcsnbjhg weuwqio gfiuefiefsj
-              ;askpquwo nbcn hsidp weupwdjnc dnm,zcb gduiyp dnm,zcb gduiyp
-              dnm,zcb gduiypdnm,zcb gduiyp
+              "Our website is a user-friendly platform created by our NGO to
+              help make a positive impact on the world. It allows you to easily
+              contribute to our charitable initiatives by making donations
+              online. With just a few clicks, you can support causes that matter
+              to you, making it convenient and accessible to help those in
+              need."
             </p>
             <a
               href="/"
